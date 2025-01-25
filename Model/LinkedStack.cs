@@ -22,10 +22,10 @@ namespace Model
             this.next = nextCard;
         }
     }
-    public class LinkedStack<T>
+    public class LinkedStack<T> : ILinkedStack<T>
     {
         Node<T> head;
-        int n;
+        public int n;
         public LinkedStack()
         {
             head = null;

@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thing", "Thing\Thing.csproj", "{BF9410FA-F767-457E-95AF-1EA95FA1E742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "Thing\Game.csproj", "{BF9410FA-F767-457E-95AF-1EA95FA1E742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{12C9708E-8251-4D08-9AC4-2787105D2BF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{12C9708E-8251-4D08-9AC4-2787105D2BF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{83C9D53E-374C-4722-919E-80E54A10F8A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{83C9D53E-374C-4722-919E-80E54A10F8A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{41F956D3-41C6-4865-A428-8B103384EEDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "DataBase\Infrastructure.csproj", "{41F956D3-41C6-4865-A428-8B103384EEDD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{BA5A21E8-A57F-4615-BE87-AF113D892680}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{ECFB4300-B441-4A71-9197-6FD6E7B20AC4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{ECFB4300-B441-4A71-9197-6FD6E7B20AC4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModelLibrary", "ModelLibrary", "{88C8F9B2-CE06-480F-BEE9-975527477E64}"
 EndProject
