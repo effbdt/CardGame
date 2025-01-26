@@ -17,6 +17,12 @@ namespace Infrastructure
             _context = context;
         }
 
+        public void Add(Card card)
+        {
+            _context.Add(card);
+            _context.SaveChanges();
+        }
+
         public void AddCustomCard(Card card)
         {
             _context.Cards.Add(card);

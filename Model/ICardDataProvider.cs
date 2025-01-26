@@ -8,7 +8,7 @@ namespace Model
 {
     public interface ICardDataProvider
     {
-
+        void Add(Card card);
         void AddCustomCard(Card card);
         IEnumerable<Card> GetAllCards();
         Card GetCardByName(string cardName);

@@ -19,6 +19,10 @@ namespace Application
             _cardDataProvider = cardDataProvider;
         }
 
+        public void Add(Card card)
+        {
+            _cardDataProvider.Add(card);
+        }
         public void AddCustomCard(Card card)
         {
             throw new NotImplementedException();
