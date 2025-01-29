@@ -54,25 +54,25 @@ namespace Model
         //have to check the validator while reading cards from json later, this doesnt do anything yet!
         [PowerValidation(7)]
 
-        public int CardPower
-        {
-            get { return CardPower; }
-            set
-            {
-                if (value > 15)
-                {
-                    CardPower = 15;
-                }
-                else if (value < 0)
-                {
-                    CardPower = 1;
-                }
-                else
-                {
-                    CardPower = value;
-                }
-            }
-        }
+        public int CardPower { get; set; }
+        //{
+        //get { return CardPower; }
+        //set
+        //{
+        //    //if (value > 15)
+        //    //{
+        //    //    CardPower = 15;
+        //    //}
+        //    //else if (value < 0)
+        //    //{
+        //    //    CardPower = 1;
+        //    //}
+        //    //else
+        //    //{
+        //    //    CardPower = value;
+        //    //}
+        //}
+        //}
 
         //false is low (bronze or smth)
         //true is high (gold or smth, stronger card)

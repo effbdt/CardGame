@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Reflection;
 
 namespace Application
 {
@@ -25,14 +26,37 @@ namespace Application
             {
                 Directory.CreateDirectory(MainFolderPath);
             }
+            string fullPathToCards = Path.Combine(MainFolderPath, "Cards");
+
+            if (!Directory.Exists(fullPathToCards))
+            {
+                Directory.CreateDirectory(fullPathToCards);
+            }
 
             string jsonData = File.ReadAllText(path);
 
             var cardsJson = JsonConvert.DeserializeObject<List<Card>>(jsonData);
             foreach (var card in cardsJson)
             {
+
                 if (HighQualityCardValidator.ValidateCard(card))
-                { _cardDataProvider.Add(card); }
+                {
+                    _cardDataProvider.Add(card);
+                    string cardFilePath = Path.Combine(fullPathToCards, card.CardName + ".txt");
+
+                    if (!File.Exists(cardFilePath))
+                    {
+                        StringBuilder sb = new StringBuilder();
+
+                        Type type = typeof(Card);
+                        foreach (PropertyInfo property in type.GetProperties())
+                        {
+                            sb.AppendLine(property.Name + ": " + property.GetValue(card));
+                        }
+                        File.WriteAllText(cardFilePath, sb.ToString());
+                    }
+
+                }
             }
         }
 
@@ -40,7 +64,7 @@ namespace Application
         {
             using (var writer = new StreamWriter(Path.Combine(MainFolderPath, "Game")))
             {
-                Console.WriteLine(playedCards);
+                writer.WriteLine(playedCards);
             }
         }
     }

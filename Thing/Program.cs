@@ -3,6 +3,7 @@ using Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Model;
 
 namespace Thing
 {
@@ -13,10 +14,10 @@ namespace Thing
             var host = Host.CreateDefaultBuilder()
                  .ConfigureServices((hostContext, services) =>
                  {
-                     services.AddScoped<CardGameDbContext>();
+                     services.AddSingleton<CardGameDbContext>();
                      services.AddSingleton<IDataProvider, DataProvider>();
 
-                     //services.AddSingleton<ICardDataProvider, CardDataProvider>();
+                     services.AddSingleton<ICardDataProvider, CardDataProvider>();
 
                      services.AddSingleton<ICardService, CardService>();
                      services.AddSingleton<IDataImportExportService, DataImportExportService>();
