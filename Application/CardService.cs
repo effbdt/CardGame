@@ -21,11 +21,12 @@ namespace Application
 
         public void Add(Card card)
         {
-            _cardDataProvider.Add(card);
-        }
-        public void AddCustomCard(Card card)
-        {
-            throw new NotImplementedException();
+            if (HighQualityCardValidator.ValidateCard(card))
+            {
+                _cardDataProvider.Add(card);
+                DataImportExportService.SubFolderCheck(card);
+            }
+
         }
 
         public IEnumerable<Card> GetAllCards()

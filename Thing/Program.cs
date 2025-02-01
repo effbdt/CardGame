@@ -1,4 +1,5 @@
 ﻿using Application;
+using Game;
 using Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,6 +35,10 @@ namespace Thing
             var cardGameService = serviceProvider.GetService<ICardGameService>();
             Console.Clear();
             cardGameService.DataImportExportService.JsonReader(jsonPath);
+
+            var menu = GameUi.MainMenu(cardGameService);
+
+            menu.Show();
 
         }
     }

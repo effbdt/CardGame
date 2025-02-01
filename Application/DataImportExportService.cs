@@ -44,18 +44,7 @@ namespace Application
                     _cardDataProvider.Add(card);
                     string cardFilePath = Path.Combine(fullPathToCards, card.CardName + ".txt");
 
-                    if (!File.Exists(cardFilePath))
-                    {
-                        StringBuilder sb = new StringBuilder();
-
-                        Type type = typeof(Card);
-                        foreach (PropertyInfo property in type.GetProperties())
-                        {
-                            sb.AppendLine(property.Name + ": " + property.GetValue(card));
-                        }
-                        File.WriteAllText(cardFilePath, sb.ToString());
-                    }
-
+                    SubFolderCheck(card);
                 }
             }
         }
@@ -65,6 +54,22 @@ namespace Application
             using (var writer = new StreamWriter(Path.Combine(MainFolderPath, "Game")))
             {
                 writer.WriteLine(playedCards);
+            }
+        }
+
+        public static void SubFolderCheck(Card card)
+        {
+            string cardFilePath = Path.Combine(MainFolderPath, "Cards", card.CardName + ".txt");
+            if (!File.Exists(cardFilePath))
+            {
+                StringBuilder sb = new StringBuilder();
+
+                Type type = typeof(Card);
+                foreach (PropertyInfo property in type.GetProperties())
+                {
+                    sb.AppendLine(property.Name + ": " + property.GetValue(card));
+                }
+                File.WriteAllText(cardFilePath, sb.ToString());
             }
         }
     }

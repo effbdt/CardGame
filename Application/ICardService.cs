@@ -10,7 +10,6 @@ namespace Application
     public interface ICardService
     {
         void Add(Card card);
-        void AddCustomCard(Card card);
         IEnumerable<Card> GetAllCards();
         Card GetCardByName(string cardName);
 

@@ -23,12 +23,6 @@ namespace Infrastructure
             _context.SaveChanges();
         }
 
-        public void AddCustomCard(Card card)
-        {
-            _context.Cards.Add(card);
-            _context.SaveChanges();
-        }
-
         public IEnumerable<Card> GetAllCards()
         {
             return _context.Cards.ToList();

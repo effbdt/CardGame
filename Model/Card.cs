@@ -22,7 +22,10 @@ namespace Model
                     int power = (int)property.GetValue(card);
                     if (card.HighQuality && power < attribute.MinValueForProperty)
                     {
-                        Console.WriteLine($"Validation failed: {property.Name} must be at least {attribute.MinValueForProperty} when HighQuality is true.");
+                        return false;
+                    }
+                    if (!card.HighQuality && power >= attribute.MinValueForProperty)
+                    {
                         return false;
                     }
                 }
