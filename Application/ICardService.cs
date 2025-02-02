@@ -9,6 +9,8 @@ namespace Application
 {
     public interface ICardService
     {
+        Action SuccessfullyAddedCardEvent { get; set; }
+        Action FailedValidationEvent { get; set; }
         void Add(Card card);
         IEnumerable<Card> GetAllCards();
         Card GetCardByName(string cardName);

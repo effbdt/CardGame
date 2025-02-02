@@ -12,6 +12,8 @@ namespace Model
 {
     public static class HighQualityCardValidator
     {
+        
+
         public static bool ValidateCard(Card card)
         {
             foreach (var property in card.GetType().GetProperties())
@@ -20,11 +22,7 @@ namespace Model
                 if (attribute != null)
                 {
                     int power = (int)property.GetValue(card);
-                    if (card.HighQuality && power < attribute.MinValueForProperty)
-                    {
-                        return false;
-                    }
-                    if (!card.HighQuality && power >= attribute.MinValueForProperty)
+                    if (card.HighQuality && power < attribute.MinValueForProperty || !card.HighQuality && power >= attribute.MinValueForProperty)
                     {
                         return false;
                     }

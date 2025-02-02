@@ -14,6 +14,10 @@ namespace Application
     {
         private readonly ICardDataProvider _cardDataProvider;
 
+
+        public Action SuccessfullyAddedCardEvent { get; set; }
+        public Action FailedValidationEvent { get; set; }
+
         public CardService(ICardDataProvider cardDataProvider)
         {
             _cardDataProvider = cardDataProvider;
@@ -25,6 +29,11 @@ namespace Application
             {
                 _cardDataProvider.Add(card);
                 DataImportExportService.SubFolderCheck(card);
+                SuccessfullyAddedCardEvent?.Invoke();
+            }
+            else
+            {
+                FailedValidationEvent?.Invoke();
             }
 
         }

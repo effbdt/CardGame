@@ -42,10 +42,9 @@ namespace Application
                 if (HighQualityCardValidator.ValidateCard(card))
                 {
                     _cardDataProvider.Add(card);
-                    string cardFilePath = Path.Combine(fullPathToCards, card.CardName + ".txt");
-
                     SubFolderCheck(card);
                 }
+
             }
         }
 
