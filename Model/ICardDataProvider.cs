@@ -14,6 +14,6 @@ namespace Model
 
         LinkedStack<Card> GetDeck();
 
-        IEnumerable<Card> GetHand();
+        List<Card> GetHand();
     }
 }

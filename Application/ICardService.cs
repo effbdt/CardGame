@@ -17,6 +17,8 @@ namespace Application
 
         LinkedStack<Card> GetDeck();
 
-        IEnumerable<Card> GetHand();
+        List<Card> GetHand();
+        void PlayCard(ref List<Card> Hand, Card playedCard, ref int points, ref int cardsInHand);
+        void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck);
     }
 }

@@ -54,16 +54,19 @@ namespace Application
             return _cardDataProvider.GetDeck();
         }
 
-        public IEnumerable<Card> GetHand()
+        public List<Card> GetHand()
         {
             return _cardDataProvider.GetHand();
         }
 
         public void PlayCard(ref List<Card> Hand, Card playedCard, ref int points, ref int cardsInHand)
         {
-            points = points + playedCard.CardPower;
-            cardsInHand--;
-            Hand.RemoveAll(c => c.CardId == playedCard.CardId);
+            if (cardsInHand > 0)
+            {
+                points = points + playedCard.CardPower;
+                cardsInHand--;
+                Hand.RemoveAll(c => c.CardId == playedCard.CardId);
+            }
         }
 
         public void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck)

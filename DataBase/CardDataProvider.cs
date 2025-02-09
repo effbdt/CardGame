@@ -36,8 +36,6 @@ namespace Infrastructure
         public LinkedStack<Card> GetDeck()
         {
             LinkedStack<Card> Deck = new LinkedStack<Card>();
-
-            //implement that only 5 cards can be high quality later
             var cards = _context.Cards.Take(15).ToList();
 
             foreach (var card in cards)
@@ -48,7 +46,7 @@ namespace Infrastructure
             return Deck;
         }
 
-        public IEnumerable<Card> GetHand()
+        public List<Card> GetHand()
         {
             LinkedStack<Card> Deck = GetDeck();
             List<Card> Hand = new List<Card>();

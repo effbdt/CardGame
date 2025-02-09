@@ -59,6 +59,39 @@ namespace Game
 
         private static void StartGame(ICardGameService cardGameService)
         {
+            LinkedStack<Card> playerDeck = cardGameService.CardService.GetDeck();
+            List<Card> playerHand = cardGameService.CardService.GetHand();
+            LinkedStack<Card> opponentDeck = cardGameService.CardService.GetDeck();
+            var opponentHand = cardGameService.CardService.GetHand();
+            int playerPoints = 0;
+            int opponentPoints = 0;
+            int turn = 1;
+            int cardsInHand = playerHand.Count();
+            int choice;
+
+            do
+            {
+                for (int i = 0; i < playerHand.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {playerHand[i].CardName}    {playerHand[i].CardPower}");
+                }
+                while (true)
+                {
+                    Console.Write("Enter the index of the card you want to play: ");
+                    if (int.TryParse(Console.ReadLine(), out choice) && choice >= 1 && choice <= playerHand.Count())
+                    {
+                        break;
+                    }
+                    Console.WriteLine("Invalid input. Please enter a valid index.");
+                }
+                Card playedCard = playerHand[choice - 1];
+                cardGameService.CardService.PlayCard(ref playerHand, playedCard, ref playerPoints, ref cardsInHand);
+                Console.WriteLine($"Player played: {playedCard.CardName}");
+                Console.WriteLine($"Player's points: {playerPoints}");
+                turn++;
+
+            } while (cardsInHand > 0);
+            Console.ReadLine();
         }
     }
 }
