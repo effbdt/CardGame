@@ -20,9 +20,15 @@ namespace Game
                 .Add("Exit", () => Environment.Exit(0))
                 .Configure(config =>
                 {
-                    config.Title = "Main Menu";
+                    config.Title = "Main Menu\n";
                     config.EnableWriteTitle = true;
                 });
+
+            //if (cardGameService.CardService.NameEntered)
+            //{
+            //    Console.WriteLine($"\nYour username: {cardGameService.CardService.playerUsername}");
+            //}
+
             return menu;
         }
 
@@ -37,8 +43,18 @@ namespace Game
 
         private static void PlayerUsername(ICardGameService cardGameService)
         {
+            if (cardGameService.CardService.NameEntered)
+            {
+                Console.WriteLine("Username has already been entered!");
+                Console.WriteLine("Press enter to go back to settings!");
+                Console.ReadLine();
+
+                return;
+            }
+
             Console.Write("Enter username: ");
             string playerName = Console.ReadLine();
+            cardGameService.CardService.playerUsername(playerName);
         }
 
         private static void CustomCardAdd(ICardGameService cardGameService)

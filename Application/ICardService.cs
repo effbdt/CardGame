@@ -20,5 +20,9 @@ namespace Application
         List<Card> GetHand();
         void PlayCard(ref List<Card> Hand, Card playedCard, ref int points, ref int cardsInHand);
         void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck);
+
+        string playerUsername(string name);
+
+        bool NameEntered { get; set; }
     }
 }
