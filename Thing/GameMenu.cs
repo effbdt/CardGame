@@ -30,8 +30,15 @@ namespace Game
         {
             var menu = new ConsoleMenu()
                 .Add("Add a custom card!", () => CustomCardAdd(cardGameService))
+                .Add("Enter a username!", () => PlayerUsername(cardGameService))
                 .Add("Back", ConsoleMenu.Close);
             menu.Show();
+        }
+
+        private static void PlayerUsername(ICardGameService cardGameService)
+        {
+            Console.Write("Enter username: ");
+            string playerName = Console.ReadLine();
         }
 
         private static void CustomCardAdd(ICardGameService cardGameService)
@@ -86,9 +93,12 @@ namespace Game
                 }
                 Card playedCard = playerHand[choice - 1];
                 cardGameService.CardService.PlayCard(ref playerHand, playedCard, ref playerPoints, ref cardsInHand);
+                Console.Clear();
                 Console.WriteLine($"Player played: {playedCard.CardName}");
                 Console.WriteLine($"Player's points: {playerPoints}");
                 turn++;
+                Console.WriteLine("\nEnter to proceed!");
+                Console.ReadLine();
 
             } while (cardsInHand > 0);
             Console.ReadLine();
