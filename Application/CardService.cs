@@ -15,6 +15,7 @@ namespace Application
         private readonly ICardDataProvider _cardDataProvider;
 
         public bool NameEntered { get; set; }
+        public string Name { get; set; } = "Player";
 
         public Action SuccessfullyAddedCardEvent { get; set; }
         public Action FailedValidationEvent { get; set; }
@@ -39,10 +40,10 @@ namespace Application
 
         }
 
-        public string playerUsername(string name)
+        public void playerUsername(string name)
         {
             NameEntered = true;
-            return name;
+            Name = name;
         }
 
         public IEnumerable<Card> GetAllCards()
