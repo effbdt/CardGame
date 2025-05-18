@@ -7,86 +7,82 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public class NoCardException : Exception
-    { }
+	public class NoCardException : Exception
+	{ }
 
-    public class CardService : ICardService
-    {
-        private readonly ICardDataProvider _cardDataProvider;
+	public class CardService : ICardService
+	{
+		private readonly ICardDataProvider _cardDataProvider;
 
-        public bool NameEntered { get; set; }
-        public string Name { get; set; } = "Player";
+		public bool NameEntered { get; set; }
+		public string Name { get; set; } = "Player";
 
-        public Action SuccessfullyAddedCardEvent { get; set; }
-        public Action FailedValidationEvent { get; set; }
+		public Action SuccessfullyAddedCardEvent { get; set; }
+		public Action FailedValidationEvent { get; set; }
 
-        public CardService(ICardDataProvider cardDataProvider)
-        {
-            _cardDataProvider = cardDataProvider;
-        }
+		public CardService(ICardDataProvider cardDataProvider)
+		{
+			_cardDataProvider = cardDataProvider;
+		}
 
-        public void Add(Card card)
-        {
-            if (HighQualityCardValidator.ValidateCard(card))
-            {
-                _cardDataProvider.Add(card);
-                DataImportExportService.SubFolderCheck(card);
-                SuccessfullyAddedCardEvent?.Invoke();
-            }
-            else
-            {
-                FailedValidationEvent?.Invoke();
-            }
+		public void Add(Card card)
+		{
+			if (HighQualityCardValidator.ValidateCard(card))
+			{
+				_cardDataProvider.Add(card);
+				DataImportExportService.SubFolderCheck(card);
+				SuccessfullyAddedCardEvent?.Invoke();
+			}
+			else
+			{
+				FailedValidationEvent?.Invoke();
+			}
 
-        }
+		}
 
-        public void playerUsername(string name)
-        {
-            NameEntered = true;
-            Name = name;
-        }
+		public void playerUsername(string name)
+		{
+			NameEntered = true;
+			Name = name;
+		}
 
-        public IEnumerable<Card> GetAllCards()
-        {
-            return _cardDataProvider.GetAllCards();
-        }
+		public IEnumerable<Card> GetAllCards()
+		{
+			return _cardDataProvider.GetAllCards();
+		}
 
-        public Card GetCardByName(string cardName)
-        {
-            if (_cardDataProvider.GetCardByName(cardName) != null) return _cardDataProvider.GetCardByName(cardName);
-            throw new NoCardException();
-        }
+		public Card GetCardByName(string cardName)
+		{
+			if (_cardDataProvider.GetCardByName(cardName) != null) return _cardDataProvider.GetCardByName(cardName);
+			throw new NoCardException();
+		}
 
-        public LinkedStack<Card> GetDeck()
-        {
-            return _cardDataProvider.GetDeck();
-        }
+		public LinkedStack<Card> GetDeck()
+		{
+			return _cardDataProvider.GetDeck();
+		}
 
-        public List<Card> GetHand()
-        {
-            return _cardDataProvider.GetHand();
-        }
+		public List<Card> GetHand()
+		{
+			return _cardDataProvider.GetHand();
+		}
 
-        public void PlayCard(ref List<Card> Hand, Card playedCard, ref int points, ref int cardsInHand)
-        {
-            if (cardsInHand > 0)
-            {
-                points = points + playedCard.CardPower;
-                cardsInHand--;
-                Hand.RemoveAll(c => c.CardId == playedCard.CardId);
-            }
-        }
+		public void PlayCard(ref List<Card> Hand, Card playedCard, ref int points)
+		{
+			if (Hand.Count() > 0)
+			{
+				points = points + playedCard.CardPower;
+				Hand.RemoveAll(c => c.CardId == playedCard.CardId);
+			}
+		}
 
-        public void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck)
-        {
-            int cardsInHand = Hand.Count;
+		public void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck)
+		{
 
-            while (cardsInHand < 5 && Deck.n > -1)
-            {
-                Card drawnCard = Deck.GetFromTop();
-                Hand.Add(drawnCard);
-                cardsInHand++;
-            }
-        }
-    }
+			while (Hand.Count() < 5 && !Deck.IsEmpty())
+			{
+				Hand.Add(Deck.GetFromTop());
+			}
+		}
+	}
 }

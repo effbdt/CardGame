@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public interface ICardService
-    {
-        Action SuccessfullyAddedCardEvent { get; set; }
-        Action FailedValidationEvent { get; set; }
-        void Add(Card card);
-        IEnumerable<Card> GetAllCards();
-        Card GetCardByName(string cardName);
+	public interface ICardService
+	{
+		Action SuccessfullyAddedCardEvent { get; set; }
+		Action FailedValidationEvent { get; set; }
+		void Add(Card card);
+		IEnumerable<Card> GetAllCards();
+		Card GetCardByName(string cardName);
 
-        LinkedStack<Card> GetDeck();
+		LinkedStack<Card> GetDeck();
 
-        List<Card> GetHand();
-        void PlayCard(ref List<Card> Hand, Card playedCard, ref int points, ref int cardsInHand);
-        void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck);
+		List<Card> GetHand();
+		void PlayCard(ref List<Card> Hand, Card playedCard, ref int points);
+		void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck);
 
-        void playerUsername(string name);
+		void playerUsername(string name);
 
-        bool NameEntered { get; set; }
-        string Name { get; set; }
-    }
+		bool NameEntered { get; set; }
+		string Name { get; set; }
+	}
 }
