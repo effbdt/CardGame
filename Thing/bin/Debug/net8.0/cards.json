@@ -88,5 +88,95 @@
     "CardPower": 9,
     "HighQuality": true,
     "Description": "A master of black magic, feared for her powerful curses."
+  },
+  {
+    "CardName": "Savannah Lion",
+    "CardPower": 4,
+    "HighQuality": false,
+    "Description": "A swift predator from the open plains."
+  },
+  {
+    "CardName": "Volcanic Elemental",
+    "CardPower": 11,
+    "HighQuality": true,
+    "Description": "Born of molten lava and fury."
+  },
+  {
+    "CardName": "Forest Druid",
+    "CardPower": 5,
+    "HighQuality": false,
+    "Description": "Harnesses the healing and growth of nature."
+  },
+  {
+    "CardName": "Iron Defender",
+    "CardPower": 6,
+    "HighQuality": false,
+    "Description": "A loyal guardian clad in heavy armor."
+  },
+  {
+    "CardName": "Crimson Witch",
+    "CardPower": 9,
+    "HighQuality": true,
+    "Description": "Draws power from blood rituals and ancient hexes."
+  },
+  {
+    "CardName": "Sky Sentinel",
+    "CardPower": 10,
+    "HighQuality": true,
+    "Description": "Watches over the battlefield from the skies."
+  },
+  {
+    "CardName": "Troll Brute",
+    "CardPower": 7,
+    "HighQuality": false,
+    "Description": "Strong, slow, and hard to take down."
+  },
+  {
+    "CardName": "Mirror Illusionist",
+    "CardPower": 6,
+    "HighQuality": false,
+    "Description": "Confuses enemies with deceptive magic."
+  },
+  {
+    "CardName": "Nightshade Hunter",
+    "CardPower": 8,
+    "HighQuality": true,
+    "Description": "Stalks prey under the cover of darkness."
+  },
+  {
+    "CardName": "Celestial Monk",
+    "CardPower": 10,
+    "HighQuality": true,
+    "Description": "Fights with balance and divine focus."
+  },
+  {
+    "CardName": "Swamp Beast",
+    "CardPower": 5,
+    "HighQuality": false,
+    "Description": "Emerges from murky waters to strike."
+  },
+  {
+    "CardName": "Runeblade Knight",
+    "CardPower": 9,
+    "HighQuality": true,
+    "Description": "Enhances sword strikes with ancient magic."
+  },
+  {
+    "CardName": "Vine Elemental",
+    "CardPower": 4,
+    "HighQuality": false,
+    "Description": "Animated plant mass that restrains foes."
+  },
+  {
+    "CardName": "Arcane Sentinel",
+    "CardPower": 11,
+    "HighQuality": true,
+    "Description": "Defends allies with magical shields and force."
+  },
+  {
+    "CardName": "Sandstorm Djinn",
+    "CardPower": 12,
+    "HighQuality": true,
+    "Description": "Summons desert winds to obscure and destroy."
   }
 ]

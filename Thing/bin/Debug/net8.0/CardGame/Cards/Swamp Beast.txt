@@ -1,0 +1,5 @@
+CardId: 6625d504-c305-41d1-87c5-64c679708702
+CardName: Swamp Beast
+CardPower: 5
+HighQuality: False
+Description: Emerges from murky waters to strike.

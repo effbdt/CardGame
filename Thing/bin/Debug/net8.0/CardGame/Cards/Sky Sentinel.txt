@@ -1,0 +1,5 @@
+CardId: 610d5321-5ba2-4f6d-bdfc-5014d544a84c
+CardName: Sky Sentinel
+CardPower: 10
+HighQuality: True
+Description: Watches over the battlefield from the skies.

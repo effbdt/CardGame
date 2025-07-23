@@ -1,0 +1,5 @@
+CardId: 55f8d216-5758-462a-9807-af8c5135fede
+CardName: Mirror Illusionist
+CardPower: 6
+HighQuality: False
+Description: Confuses enemies with deceptive magic.

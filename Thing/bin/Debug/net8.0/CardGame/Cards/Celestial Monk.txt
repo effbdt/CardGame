@@ -1,0 +1,5 @@
+CardId: 1316c367-bb97-48cc-97cc-b4311cafc878
+CardName: Celestial Monk
+CardPower: 10
+HighQuality: True
+Description: Fights with balance and divine focus.

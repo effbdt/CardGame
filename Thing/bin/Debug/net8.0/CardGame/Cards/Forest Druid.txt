@@ -1,0 +1,5 @@
+CardId: 0cb789f8-96b0-4a62-9af7-39aa10bb7a8f
+CardName: Forest Druid
+CardPower: 5
+HighQuality: False
+Description: Harnesses the healing and growth of nature.

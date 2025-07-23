@@ -1,0 +1,5 @@
+CardId: 7f7c67ee-8abe-4c22-bff7-24e03a5357f3
+CardName: Crimson Witch
+CardPower: 9
+HighQuality: True
+Description: Draws power from blood rituals and ancient hexes.

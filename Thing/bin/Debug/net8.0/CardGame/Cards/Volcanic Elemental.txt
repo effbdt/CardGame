@@ -1,0 +1,5 @@
+CardId: 23094de2-8929-4066-a5d6-11ca10b63147
+CardName: Volcanic Elemental
+CardPower: 11
+HighQuality: True
+Description: Born of molten lava and fury.

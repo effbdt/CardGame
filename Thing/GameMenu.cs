@@ -97,12 +97,37 @@ namespace Game
 			return (winner, points);
 		}
 
+		static void OpponentsTurn(LinkedStack<Card> opponentDeck, List<Card> opponentHand, ref int opponentPoints, ICardGameService cardGameService)
+		{
+			int handCount = opponentHand.Count;
+			if (opponentHand.Count > 0)
+			{
+				Card oppPlayedCard = opponentHand[0];
+				opponentHand.RemoveAt(0);
+				opponentPoints += oppPlayedCard.CardPower;
+				Console.WriteLine($"Opponent played: {oppPlayedCard.CardName}");
+				Console.WriteLine($"Opponent's points: {opponentPoints}");
+				Console.WriteLine("Enter to proceed!");
+				Console.ReadLine();
+				Console.Clear();
+			}
+			else if (!opponentDeck.IsEmpty())
+			{
+				int amountOfCardsDrawn = Math.Min(5 - handCount, opponentDeck.Length);
+				cardGameService.CardService.DrawCards(ref opponentHand, ref opponentDeck);
+				Console.WriteLine($"\nOpponent drew {amountOfCardsDrawn} card(s) from the deck!\nCards remaining in opponent's deck: {opponentDeck.Length}");
+				Console.WriteLine("Press enter to continue!");
+				Console.ReadLine();
+				Console.Clear();
+			}
+		}
+
 		private static void StartGame(ICardGameService cardGameService)
 		{
 			LinkedStack<Card> playerDeck = cardGameService.CardService.GetDeck();
 			List<Card> playerHand = cardGameService.CardService.GetHand(ref playerDeck);
 			LinkedStack<Card> opponentDeck = cardGameService.CardService.GetDeck();
-			var opponentHand = cardGameService.CardService.GetHand(ref opponentDeck);
+			List<Card> opponentHand = cardGameService.CardService.GetHand(ref opponentDeck);
 			int playerPoints = 0;
 			int opponentPoints = 0;
 			int turn = 1;
@@ -148,12 +173,13 @@ namespace Game
 				{
 					int amountOfCardsDrawn = Math.Min(5 - playerHand.Count(), playerDeck.Length);
 					cardGameService.CardService.DrawCards(ref playerHand, ref playerDeck);
-					Console.WriteLine($"\n{amountOfCardsDrawn} card(s) were drawn from your deck!\nCards remaining in your deck: {playerDeck.n}");
+					Console.WriteLine($"\n{amountOfCardsDrawn} card(s) were drawn from your deck!\nCards remaining in your deck: {playerDeck.Length}");
 					Console.WriteLine("Press enter to continue!");
 					Console.ReadLine();
 					Console.Clear();
 					canDraw = false;
 				}
+				OpponentsTurn(opponentDeck, opponentHand, ref opponentPoints, cardGameService);
 
 			} while (playerHand.Count() > 0 || !playerDeck.IsEmpty());
 			var winner = GetWinner(playerPoints, opponentPoints, cardGameService);
@@ -162,7 +188,6 @@ namespace Game
 			Console.WriteLine($"The winner is: {winner.Winner}, with {winner.WinnerPoints} points!");
 			Console.WriteLine("Enter to proceed!");
 			Console.ReadLine();
-
 		}
 	}
 }

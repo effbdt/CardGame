@@ -1,0 +1,5 @@
+CardId: 040c9d78-1c8d-45b8-aa58-5584143c4f4f
+CardName: Sandstorm Djinn
+CardPower: 12
+HighQuality: True
+Description: Summons desert winds to obscure and destroy.

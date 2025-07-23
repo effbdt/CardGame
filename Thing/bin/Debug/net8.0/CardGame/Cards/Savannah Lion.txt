@@ -1,0 +1,5 @@
+CardId: b94bf349-4165-4067-9d8b-1b4545392922
+CardName: Savannah Lion
+CardPower: 4
+HighQuality: False
+Description: A swift predator from the open plains.

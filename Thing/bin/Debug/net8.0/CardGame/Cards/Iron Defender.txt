@@ -1,0 +1,5 @@
+CardId: 7381a08d-5931-49f8-8736-bdac420fc094
+CardName: Iron Defender
+CardPower: 6
+HighQuality: False
+Description: A loyal guardian clad in heavy armor.

@@ -1,0 +1,5 @@
+CardId: 24cf1708-281a-48c9-a15e-9c31c4ac5d6f
+CardName: Runeblade Knight
+CardPower: 9
+HighQuality: True
+Description: Enhances sword strikes with ancient magic.

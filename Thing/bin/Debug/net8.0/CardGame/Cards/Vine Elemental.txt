@@ -1,0 +1,5 @@
+CardId: 51f9b2d1-8960-431f-ab30-edcc75a08db9
+CardName: Vine Elemental
+CardPower: 4
+HighQuality: False
+Description: Animated plant mass that restrains foes.
