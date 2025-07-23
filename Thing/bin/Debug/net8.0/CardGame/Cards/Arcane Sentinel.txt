@@ -1,4 +1,4 @@
-CardId: 5d6a2c61-1b6a-4324-b2ff-ca9bd00dc217
+CardId: 73473a5c-861c-423e-aa98-90901c96971d
 CardName: Arcane Sentinel
 CardPower: 11
 HighQuality: True

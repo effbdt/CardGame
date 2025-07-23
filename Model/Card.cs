@@ -85,7 +85,7 @@ namespace Model
 		//true is high (gold or smth, stronger card)
 		public bool HighQuality { get; set; }
 
-		[MaxLength(150)]
+		[MaxLength(250)]
 		public string Description { get; set; }
 
 		public Card(string cardName, int cardPower, bool highQuality, string description)

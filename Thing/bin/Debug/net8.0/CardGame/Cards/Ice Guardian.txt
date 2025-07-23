@@ -1,4 +1,4 @@
-CardId: c5f87a4f-7c78-49ba-ac1a-74315ba7274a
+CardId: 26260d90-822e-4572-8878-04365c92fdbf
 CardName: Ice Guardian
 CardPower: 6
 HighQuality: False

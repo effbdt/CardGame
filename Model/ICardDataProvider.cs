@@ -15,5 +15,7 @@ namespace Model
 		LinkedStack<Card> GetDeck();
 
 		List<Card> GetHand(ref LinkedStack<Card> Deck);
+
+		void Initialize();
 	}
 }

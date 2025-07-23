@@ -1,4 +1,4 @@
-CardId: 2e8a1599-4a02-44df-88cc-a71670505a03
+CardId: 8464a148-ac3c-4c2b-b17a-4b47653bf01f
 CardName: Necromancer
 CardPower: 8
 HighQuality: True

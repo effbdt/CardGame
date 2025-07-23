@@ -1,4 +1,4 @@
-CardId: 280e328d-2c9c-4605-8de2-08632e237364
+CardId: 120de106-afc0-4cc8-bfa7-2d848b532814
 CardName: Orc Berserker
 CardPower: 7
 HighQuality: True

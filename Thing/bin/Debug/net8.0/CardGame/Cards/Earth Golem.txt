@@ -1,0 +1,5 @@
+CardId: f36c49d3-97b6-4b20-b1e0-661e14a15709
+CardName: Earth Golem
+CardPower: 7
+HighQuality: True
+Description: A towering guardian of stone, slow but powerful.

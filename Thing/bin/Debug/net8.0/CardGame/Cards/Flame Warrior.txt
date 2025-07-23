@@ -1,4 +1,4 @@
-CardId: e220a82c-deb6-4f10-9518-190970e25228
+CardId: 0f0a522f-708e-4386-864d-b53c36716e85
 CardName: Flame Warrior
 CardPower: 10
 HighQuality: True

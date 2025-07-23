@@ -1,4 +1,4 @@
-CardId: 6625d504-c305-41d1-87c5-64c679708702
+CardId: 8ef370af-4c9b-4b3b-9be5-14603ebcb3b9
 CardName: Swamp Beast
 CardPower: 5
 HighQuality: False

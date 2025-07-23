@@ -1,4 +1,4 @@
-CardId: b3f26931-0720-44fc-a881-ac1b03eb7764
+CardId: 09db8d73-4628-4112-b496-4936a2f00ba8
 CardName: Thunder Knight
 CardPower: 9
 HighQuality: True

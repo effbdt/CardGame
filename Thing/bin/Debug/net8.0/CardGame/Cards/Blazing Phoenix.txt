@@ -1,4 +1,4 @@
-CardId: 435de544-2db5-4053-ae17-fbec6755a6bb
+CardId: 21a303cc-bbcb-49a3-bed4-7e7a7785f977
 CardName: Blazing Phoenix
 CardPower: 12
 HighQuality: True

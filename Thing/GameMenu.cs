@@ -115,7 +115,7 @@ namespace Game
 			{
 				int amountOfCardsDrawn = Math.Min(5 - handCount, opponentDeck.Length);
 				cardGameService.CardService.DrawCards(ref opponentHand, ref opponentDeck);
-				Console.WriteLine($"\nOpponent drew {amountOfCardsDrawn} card(s) from the deck!\nCards remaining in opponent's deck: {opponentDeck.Length}");
+				Console.WriteLine($"\nOpponent drew {amountOfCardsDrawn} card(s) from the deck!\nCards remaining in opponent's deck: {opponentDeck.Length + 1}");
 				Console.WriteLine("Press enter to continue!");
 				Console.ReadLine();
 				Console.Clear();
@@ -124,6 +124,7 @@ namespace Game
 
 		private static void StartGame(ICardGameService cardGameService)
 		{
+			cardGameService.CardService.Initialize();
 			LinkedStack<Card> playerDeck = cardGameService.CardService.GetDeck();
 			List<Card> playerHand = cardGameService.CardService.GetHand(ref playerDeck);
 			LinkedStack<Card> opponentDeck = cardGameService.CardService.GetDeck();
@@ -173,7 +174,7 @@ namespace Game
 				{
 					int amountOfCardsDrawn = Math.Min(5 - playerHand.Count(), playerDeck.Length);
 					cardGameService.CardService.DrawCards(ref playerHand, ref playerDeck);
-					Console.WriteLine($"\n{amountOfCardsDrawn} card(s) were drawn from your deck!\nCards remaining in your deck: {playerDeck.Length}");
+					Console.WriteLine($"\n{amountOfCardsDrawn} card(s) were drawn from your deck!\nCards remaining in your deck: {playerDeck.Length + 1}");
 					Console.WriteLine("Press enter to continue!");
 					Console.ReadLine();
 					Console.Clear();

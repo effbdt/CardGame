@@ -1,0 +1,5 @@
+CardId: 4a2de2f3-d943-4430-8374-a414ef5678b0
+CardName: Troll Brute
+CardPower: 7
+HighQuality: True
+Description: Strong, slow, and hard to take down.

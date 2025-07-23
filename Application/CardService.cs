@@ -78,11 +78,15 @@ namespace Application
 
 		public void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck)
 		{
-
 			while (Hand.Count() < 5 && !Deck.IsEmpty())
 			{
 				Hand.Add(Deck.GetFromTop());
 			}
+		}
+
+		public void Initialize()
+		{
+			_cardDataProvider.Initialize();
 		}
 	}
 }

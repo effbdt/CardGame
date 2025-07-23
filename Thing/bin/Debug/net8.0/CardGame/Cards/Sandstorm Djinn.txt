@@ -1,4 +1,4 @@
-CardId: 040c9d78-1c8d-45b8-aa58-5584143c4f4f
+CardId: 3ab3099c-6e21-4742-8ce1-661eae31802a
 CardName: Sandstorm Djinn
 CardPower: 12
 HighQuality: True

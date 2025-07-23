@@ -1,5 +1,0 @@
-CardId: 4a4bef3d-b96e-400a-8461-e7d4c254fa1f
-CardName: bob
-CardPower: 7
-HighQuality: True
-Description: asdsa

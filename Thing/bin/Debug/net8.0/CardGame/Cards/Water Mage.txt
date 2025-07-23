@@ -1,4 +1,4 @@
-CardId: 159c11df-5928-4df4-a701-5b83ee11397b
+CardId: 62f2b071-a8ff-442f-9f89-233813f9b89f
 CardName: Water Mage
 CardPower: 5
 HighQuality: False

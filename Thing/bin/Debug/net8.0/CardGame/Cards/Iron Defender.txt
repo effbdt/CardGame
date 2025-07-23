@@ -1,4 +1,4 @@
-CardId: 7381a08d-5931-49f8-8736-bdac420fc094
+CardId: 9aa89908-ea7a-46ff-9159-8e748ebb2df7
 CardName: Iron Defender
 CardPower: 6
 HighQuality: False

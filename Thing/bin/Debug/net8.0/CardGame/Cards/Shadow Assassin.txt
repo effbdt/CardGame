@@ -1,4 +1,4 @@
-CardId: 6515d333-afbf-4540-9a11-cedf57a6d750
+CardId: 09a8fb26-f921-4843-be54-dbe290de15ff
 CardName: Shadow Assassin
 CardPower: 8
 HighQuality: True

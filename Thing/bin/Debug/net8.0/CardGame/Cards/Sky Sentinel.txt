@@ -1,4 +1,4 @@
-CardId: 610d5321-5ba2-4f6d-bdfc-5014d544a84c
+CardId: ceeef871-7418-46b8-b090-35589434ade5
 CardName: Sky Sentinel
 CardPower: 10
 HighQuality: True

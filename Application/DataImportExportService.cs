@@ -9,67 +9,65 @@ using System.Reflection;
 
 namespace Application
 {
-    public class DataImportExportService : IDataImportExportService
-    {
-        private readonly ICardDataProvider _cardDataProvider;
+	public class DataImportExportService : IDataImportExportService
+	{
+		private readonly ICardDataProvider _cardDataProvider;
 
-        public DataImportExportService(ICardDataProvider cardDataProvider)
-        {
-            _cardDataProvider = cardDataProvider;
-        }
+		public DataImportExportService(ICardDataProvider cardDataProvider)
+		{
+			_cardDataProvider = cardDataProvider;
+		}
 
-        private const string MainFolderPath = "CardGame";
+		private const string MainFolderPath = "CardGame";
 
-        public void JsonReader(string path)
-        {
-            if (!Directory.Exists(MainFolderPath))
-            {
-                Directory.CreateDirectory(MainFolderPath);
-            }
-            string fullPathToCards = Path.Combine(MainFolderPath, "Cards");
+		public void JsonReader(string path)
+		{
+			if (!Directory.Exists(MainFolderPath))
+			{
+				Directory.CreateDirectory(MainFolderPath);
+			}
+			string fullPathToCards = Path.Combine(MainFolderPath, "Cards");
 
-            if (!Directory.Exists(fullPathToCards))
-            {
-                Directory.CreateDirectory(fullPathToCards);
-            }
+			if (!Directory.Exists(fullPathToCards))
+			{
+				Directory.CreateDirectory(fullPathToCards);
+			}
 
-            string jsonData = File.ReadAllText(path);
+			string jsonData = File.ReadAllText(path);
 
-            var cardsJson = JsonConvert.DeserializeObject<List<Card>>(jsonData);
-            foreach (var card in cardsJson)
-            {
+			var cardsJson = JsonConvert.DeserializeObject<List<Card>>(jsonData);
+			foreach (var card in cardsJson)
+			{
+				if (HighQualityCardValidator.ValidateCard(card))
+				{
+					_cardDataProvider.Add(card);
+					SubFolderCheck(card);
+				}
+			}
+		}
 
-                if (HighQualityCardValidator.ValidateCard(card))
-                {
-                    _cardDataProvider.Add(card);
-                    SubFolderCheck(card);
-                }
+		public void ExportGameProcess(string playedCards)
+		{
+			using (var writer = new StreamWriter(Path.Combine(MainFolderPath, "Game")))
+			{
+				writer.WriteLine(playedCards);
+			}
+		}
 
-            }
-        }
+		public static void SubFolderCheck(Card card)
+		{
+			string cardFilePath = Path.Combine(MainFolderPath, "Cards", card.CardName + ".txt");
+			if (!File.Exists(cardFilePath))
+			{
+				StringBuilder sb = new StringBuilder();
 
-        public void ExportGameProcess(string playedCards)
-        {
-            using (var writer = new StreamWriter(Path.Combine(MainFolderPath, "Game")))
-            {
-                writer.WriteLine(playedCards);
-            }
-        }
-
-        public static void SubFolderCheck(Card card)
-        {
-            string cardFilePath = Path.Combine(MainFolderPath, "Cards", card.CardName + ".txt");
-            if (!File.Exists(cardFilePath))
-            {
-                StringBuilder sb = new StringBuilder();
-
-                Type type = typeof(Card);
-                foreach (PropertyInfo property in type.GetProperties())
-                {
-                    sb.AppendLine(property.Name + ": " + property.GetValue(card));
-                }
-                File.WriteAllText(cardFilePath, sb.ToString());
-            }
-        }
-    }
+				Type type = typeof(Card);
+				foreach (PropertyInfo property in type.GetProperties())
+				{
+					sb.AppendLine(property.Name + ": " + property.GetValue(card));
+				}
+				File.WriteAllText(cardFilePath, sb.ToString());
+			}
+		}
+	}
 }

@@ -1,4 +1,4 @@
-CardId: 3b7830c3-1ba5-4bc5-9150-145a884e98bf
+CardId: ef7cd5f0-128d-41f0-aadb-603f7ce33b01
 CardName: Dark Sorceress
 CardPower: 9
 HighQuality: True

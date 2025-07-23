@@ -1,4 +1,4 @@
-CardId: 24cf1708-281a-48c9-a15e-9c31c4ac5d6f
+CardId: 285be0bb-b34f-4478-817a-87595d3dfc27
 CardName: Runeblade Knight
 CardPower: 9
 HighQuality: True

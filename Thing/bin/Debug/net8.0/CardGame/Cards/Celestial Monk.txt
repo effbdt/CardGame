@@ -1,4 +1,4 @@
-CardId: 1316c367-bb97-48cc-97cc-b4311cafc878
+CardId: 54eb19aa-8743-42af-affa-4b2d535bec3f
 CardName: Celestial Monk
 CardPower: 10
 HighQuality: True

@@ -1,4 +1,4 @@
-CardId: 3590b3d5-75ea-491b-8554-79f5bdf94925
+CardId: ee7242ae-80ef-430b-bd27-39937b2687ed
 CardName: Divine Paladin
 CardPower: 13
 HighQuality: True

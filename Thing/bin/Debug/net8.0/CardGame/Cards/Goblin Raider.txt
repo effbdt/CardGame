@@ -1,4 +1,4 @@
-CardId: 16ad5102-c382-4539-8ac1-23557d606bda
+CardId: fc5c7cfc-36a9-4d25-9f91-8cdb798846c6
 CardName: Goblin Raider
 CardPower: 3
 HighQuality: False

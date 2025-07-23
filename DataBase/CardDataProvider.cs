@@ -12,6 +12,7 @@ namespace Infrastructure
 	{
 		private readonly CardGameDbContext _context;
 
+
 		public CardDataProvider(CardGameDbContext context)
 		{
 			_context = context;
@@ -28,22 +29,39 @@ namespace Infrastructure
 			return _context.Cards.ToList();
 		}
 
-		public Card GetCardByName(string cardName)
+		public Card? GetCardByName(string cardName)
 		{
 			return _context.Cards.FirstOrDefault(c => c.CardName == cardName);
 		}
 
+		List<Card> availableCards = new List<Card>();
+
+
+		public void Initialize()
+		{
+			availableCards = _context.Cards.ToList();
+		}
+
+		private static readonly Random rand = new Random();
+
 		public LinkedStack<Card> GetDeck()
 		{
-			LinkedStack<Card> Deck = new LinkedStack<Card>();
-			var cards = _context.Cards.Take(15).ToList();
 
-			foreach (var card in cards)
-			{
-				Deck.LinkeDStackOnTop(card);
-			}
+			if (availableCards.Count < 15)
+				throw new InvalidOperationException("Not enough cards left to create a full deck.");
 
-			return Deck;
+			var shuffled = availableCards.OrderBy(c => rand.Next()).ToList();
+
+			var selected = shuffled.Take(15).ToList();
+
+			foreach (var card in selected)
+				availableCards.Remove(card);
+
+			LinkedStack<Card> deck = new LinkedStack<Card>();
+			foreach (var card in selected)
+				deck.LinkeDStackOnTop(card);
+
+			return deck;
 		}
 
 		public List<Card> GetHand(ref LinkedStack<Card> Deck)

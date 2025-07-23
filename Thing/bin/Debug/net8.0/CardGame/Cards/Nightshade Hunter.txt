@@ -1,4 +1,4 @@
-CardId: b65f297f-4157-46cf-902b-f81182c65715
+CardId: 1c271db3-aba4-4b84-825b-89e4d1ab4b7d
 CardName: Nightshade Hunter
 CardPower: 8
 HighQuality: True

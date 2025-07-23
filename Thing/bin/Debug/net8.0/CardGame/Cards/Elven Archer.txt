@@ -1,4 +1,4 @@
-CardId: f62af20e-d9fd-4f10-be67-dcf3d9c4637d
+CardId: b7054e49-f546-480e-a955-cf8c4c42c377
 CardName: Elven Archer
 CardPower: 6
 HighQuality: False

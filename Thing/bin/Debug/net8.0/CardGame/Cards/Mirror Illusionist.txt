@@ -1,4 +1,4 @@
-CardId: 55f8d216-5758-462a-9807-af8c5135fede
+CardId: e4372072-cbfa-4447-ae46-3fe71e7933f6
 CardName: Mirror Illusionist
 CardPower: 6
 HighQuality: False

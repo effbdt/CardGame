@@ -25,5 +25,7 @@ namespace Application
 
 		bool NameEntered { get; set; }
 		string Name { get; set; }
+
+		void Initialize();
 	}
 }

@@ -1,4 +1,4 @@
-CardId: 0cb789f8-96b0-4a62-9af7-39aa10bb7a8f
+CardId: a3b5ae2c-f211-48c7-9f30-7f373a3dddd2
 CardName: Forest Druid
 CardPower: 5
 HighQuality: False

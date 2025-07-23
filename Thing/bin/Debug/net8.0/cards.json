@@ -26,7 +26,7 @@
   {
     "CardName": "Earth Golem",
     "CardPower": 7,
-    "HighQuality": false,
+    "HighQuality": true,
     "Description": "A towering guardian of stone, slow but powerful."
   },
   {
@@ -128,7 +128,7 @@
   {
     "CardName": "Troll Brute",
     "CardPower": 7,
-    "HighQuality": false,
+    "HighQuality": true,
     "Description": "Strong, slow, and hard to take down."
   },
   {

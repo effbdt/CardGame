@@ -1,4 +1,4 @@
-CardId: b94bf349-4165-4067-9d8b-1b4545392922
+CardId: fd5bad3e-7f4a-476c-8231-1249cd40bf72
 CardName: Savannah Lion
 CardPower: 4
 HighQuality: False
