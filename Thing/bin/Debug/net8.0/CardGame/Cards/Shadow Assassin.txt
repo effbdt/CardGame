@@ -1,0 +1,5 @@
+CardId: 6515d333-afbf-4540-9a11-cedf57a6d750
+CardName: Shadow Assassin
+CardPower: 8
+HighQuality: True
+Description: A silent killer who moves unseen in the darkness.

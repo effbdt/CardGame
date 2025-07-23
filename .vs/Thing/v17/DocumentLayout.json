@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9410FA-F767-457E-95AF-1EA95FA1E742}|Thing\\Game.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\thing\\gamemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9410FA-F767-457E-95AF-1EA95FA1E742}|Thing\\Game.csproj|solutionrelative:thing\\gamemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9410FA-F767-457E-95AF-1EA95FA1E742}|Thing\\Game.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\thing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9410FA-F767-457E-95AF-1EA95FA1E742}|Thing\\Game.csproj|solutionrelative:thing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41F956D3-41C6-4865-A428-8B103384EEDD}|DataBase\\Infrastructure.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\database\\carddataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41F956D3-41C6-4865-A428-8B103384EEDD}|DataBase\\Infrastructure.csproj|solutionrelative:database\\carddataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83C9D53E-374C-4722-919E-80E54A10F8A2}|Application\\Application.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\application\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83C9D53E-374C-4722-919E-80E54A10F8A2}|Application\\Application.csproj|solutionrelative:application\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C9708E-8251-4D08-9AC4-2787105D2BF5}|Model\\Model.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\model\\icarddataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C9708E-8251-4D08-9AC4-2787105D2BF5}|Model\\Model.csproj|solutionrelative:model\\icarddataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41F956D3-41C6-4865-A428-8B103384EEDD}|DataBase\\Infrastructure.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\database\\idataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41F956D3-41C6-4865-A428-8B103384EEDD}|DataBase\\Infrastructure.csproj|solutionrelative:database\\idataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C9708E-8251-4D08-9AC4-2787105D2BF5}|Model\\Model.csproj|c:\\users\\davidof\\desktop\\thing\\thing\\model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C9708E-8251-4D08-9AC4-2787105D2BF5}|Model\\Model.csproj|solutionrelative:model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICardDataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Model\\ICardDataProvider.cs",
+              "RelativeDocumentMoniker": "Model\\ICardDataProvider.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Model\\ICardDataProvider.cs",
+              "RelativeToolTip": "Model\\ICardDataProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:01:12.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\DataBase\\IDataProvider.cs",
+              "RelativeDocumentMoniker": "DataBase\\IDataProvider.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\DataBase\\IDataProvider.cs",
+              "RelativeToolTip": "DataBase\\IDataProvider.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:05:56.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardDataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\DataBase\\CardDataProvider.cs",
+              "RelativeDocumentMoniker": "DataBase\\CardDataProvider.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\DataBase\\CardDataProvider.cs",
+              "RelativeToolTip": "DataBase\\CardDataProvider.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:01:46.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardService.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Application\\CardService.cs",
+              "RelativeDocumentMoniker": "Application\\CardService.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Application\\CardService.cs",
+              "RelativeToolTip": "Application\\CardService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwEkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T15:19:53.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Thing\\Program.cs",
+              "RelativeDocumentMoniker": "Thing\\Program.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Thing\\Program.cs",
+              "RelativeToolTip": "Thing\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T12:28:44.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameMenu.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Thing\\GameMenu.cs",
+              "RelativeDocumentMoniker": "Thing\\GameMenu.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Thing\\GameMenu.cs",
+              "RelativeToolTip": "Thing\\GameMenu.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAuwKAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T15:11:07.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Model\\Card.cs",
+              "RelativeDocumentMoniker": "Model\\Card.cs",
+              "ToolTip": "C:\\Users\\DAVIDOF\\Desktop\\thing\\Thing\\Model\\Card.cs",
+              "RelativeToolTip": "Model\\Card.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwBAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T11:52:24.614Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

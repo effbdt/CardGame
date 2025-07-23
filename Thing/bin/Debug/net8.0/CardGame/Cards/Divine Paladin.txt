@@ -1,0 +1,5 @@
+CardId: 3590b3d5-75ea-491b-8554-79f5bdf94925
+CardName: Divine Paladin
+CardPower: 13
+HighQuality: True
+Description: A warrior blessed by the gods, wielding holy power.

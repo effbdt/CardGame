@@ -1,0 +1,5 @@
+CardId: 2e8a1599-4a02-44df-88cc-a71670505a03
+CardName: Necromancer
+CardPower: 8
+HighQuality: True
+Description: A dark sorcerer who raises the dead to fight.

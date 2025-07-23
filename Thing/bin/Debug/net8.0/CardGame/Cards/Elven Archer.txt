@@ -1,0 +1,5 @@
+CardId: f62af20e-d9fd-4f10-be67-dcf3d9c4637d
+CardName: Elven Archer
+CardPower: 6
+HighQuality: False
+Description: A skilled archer with unparalleled precision.

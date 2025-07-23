@@ -1,0 +1,5 @@
+CardId: 3b7830c3-1ba5-4bc5-9150-145a884e98bf
+CardName: Dark Sorceress
+CardPower: 9
+HighQuality: True
+Description: A master of black magic, feared for her powerful curses.

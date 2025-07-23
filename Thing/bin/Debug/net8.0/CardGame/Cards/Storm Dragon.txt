@@ -1,0 +1,5 @@
+CardId: fcedb880-4e4b-496c-ab08-6965e027cf6c
+CardName: Storm Dragon
+CardPower: 14
+HighQuality: True
+Description: A dragon that commands the storms with devastating power.

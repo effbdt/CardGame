@@ -1,0 +1,5 @@
+CardId: e220a82c-deb6-4f10-9518-190970e25228
+CardName: Flame Warrior
+CardPower: 10
+HighQuality: True
+Description: A powerful warrior engulfed in flames, feared by all.

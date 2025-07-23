@@ -1,0 +1,5 @@
+CardId: 16ad5102-c382-4539-8ac1-23557d606bda
+CardName: Goblin Raider
+CardPower: 3
+HighQuality: False
+Description: A mischievous goblin that attacks in swarms.

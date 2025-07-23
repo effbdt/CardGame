@@ -1,0 +1,5 @@
+CardId: 1ffda38c-f38f-4b53-b2b9-9a8260257851
+CardName: Frost Giant
+CardPower: 11
+HighQuality: True
+Description: A towering beast of ice that chills enemies to the bone.

@@ -1,0 +1,5 @@
+CardId: 159c11df-5928-4df4-a701-5b83ee11397b
+CardName: Water Mage
+CardPower: 5
+HighQuality: False
+Description: A spellcaster who controls the tides and rain.

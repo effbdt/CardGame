@@ -1,0 +1,5 @@
+CardId: b3f26931-0720-44fc-a881-ac1b03eb7764
+CardName: Thunder Knight
+CardPower: 9
+HighQuality: True
+Description: A knight infused with the power of lightning, striking swiftly.

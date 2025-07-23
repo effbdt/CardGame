@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace Game
 {
@@ -81,6 +82,21 @@ namespace Game
 			Console.ReadLine();
 		}
 
+		static void DisplayHand(List<Card> hand)
+		{
+			for (int i = 0; i < hand.Count; i++)
+			{
+				Console.WriteLine($"{i + 1}. Play: {hand[i].CardName,-20}		Power: {hand[i].CardPower}");
+			}
+		}
+
+		static (string Winner, int WinnerPoints) GetWinner(int points1, int points2, ICardGameService cardGameService)
+		{
+			string winner = points1 >= points2 ? cardGameService.CardService.Name : "opponent";
+			int points = points1 >= points2 ? points1 : points2;
+			return (winner, points);
+		}
+
 		private static void StartGame(ICardGameService cardGameService)
 		{
 			LinkedStack<Card> playerDeck = cardGameService.CardService.GetDeck();
@@ -93,12 +109,11 @@ namespace Game
 			int choice;
 			string playerName = cardGameService.CardService.Name;
 			bool canDraw = false;
+			Console.Clear();
 			do
 			{
-				for (int i = 0; i < playerHand.Count; i++)
-				{
-					Console.WriteLine($"{i + 1}. Play: {playerHand[i].CardName,-20}		Power: {playerHand[i].CardPower}");
-				}
+				Console.WriteLine($"Turn: {turn}\n");
+				DisplayHand(playerHand);
 				if (playerHand.Count() < 5 && !playerDeck.IsEmpty())
 				{
 					canDraw = true;
@@ -127,6 +142,7 @@ namespace Game
 					turn++;
 					Console.WriteLine("\nEnter to proceed!");
 					Console.ReadLine();
+					Console.Clear();
 				}
 				else if (canDraw)
 				{
@@ -139,8 +155,13 @@ namespace Game
 					canDraw = false;
 				}
 
-
 			} while (playerHand.Count() > 0 || !playerDeck.IsEmpty());
+			var winner = GetWinner(playerPoints, opponentPoints, cardGameService);
+
+			Console.WriteLine($"The game ended!");
+			Console.WriteLine($"The winner is: {winner.Winner}, with {winner.WinnerPoints} points!");
+			Console.WriteLine("Enter to proceed!");
+			Console.ReadLine();
 
 		}
 	}

@@ -1,0 +1,5 @@
+CardId: 280e328d-2c9c-4605-8de2-08632e237364
+CardName: Orc Berserker
+CardPower: 7
+HighQuality: True
+Description: A savage warrior who grows stronger in battle.

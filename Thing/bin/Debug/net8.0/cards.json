@@ -1,0 +1,92 @@
+[
+  {
+    "CardName": "Flame Warrior",
+    "CardPower": 10,
+    "HighQuality": true,
+    "Description": "A powerful warrior engulfed in flames, feared by all."
+  },
+  {
+    "CardName": "Ice Guardian",
+    "CardPower": 6,
+    "HighQuality": false,
+    "Description": "A mystical guardian that freezes enemies in their tracks."
+  },
+  {
+    "CardName": "Thunder Knight",
+    "CardPower": 9,
+    "HighQuality": true,
+    "Description": "A knight infused with the power of lightning, striking swiftly."
+  },
+  {
+    "CardName": "Shadow Assassin",
+    "CardPower": 8,
+    "HighQuality": true,
+    "Description": "A silent killer who moves unseen in the darkness."
+  },
+  {
+    "CardName": "Earth Golem",
+    "CardPower": 7,
+    "HighQuality": false,
+    "Description": "A towering guardian of stone, slow but powerful."
+  },
+  {
+    "CardName": "Water Mage",
+    "CardPower": 5,
+    "HighQuality": false,
+    "Description": "A spellcaster who controls the tides and rain."
+  },
+  {
+    "CardName": "Blazing Phoenix",
+    "CardPower": 12,
+    "HighQuality": true,
+    "Description": "A legendary bird that rises from its own ashes."
+  },
+  {
+    "CardName": "Frost Giant",
+    "CardPower": 11,
+    "HighQuality": true,
+    "Description": "A towering beast of ice that chills enemies to the bone."
+  },
+  {
+    "CardName": "Storm Dragon",
+    "CardPower": 14,
+    "HighQuality": true,
+    "Description": "A dragon that commands the storms with devastating power."
+  },
+  {
+    "CardName": "Goblin Raider",
+    "CardPower": 3,
+    "HighQuality": false,
+    "Description": "A mischievous goblin that attacks in swarms."
+  },
+  {
+    "CardName": "Necromancer",
+    "CardPower": 8,
+    "HighQuality": true,
+    "Description": "A dark sorcerer who raises the dead to fight."
+  },
+  {
+    "CardName": "Divine Paladin",
+    "CardPower": 13,
+    "HighQuality": true,
+    "Description": "A warrior blessed by the gods, wielding holy power."
+  },
+  {
+    "CardName": "Elven Archer",
+    "CardPower": 6,
+    "HighQuality": false,
+    "Description": "A skilled archer with unparalleled precision."
+  },
+  {
+    "CardName": "Orc Berserker",
+    "CardPower": 7,
+    "HighQuality": true,
+    "Description": "A savage warrior who grows stronger in battle."
+  },
+  {
+    "CardName": "Dark Sorceress",
+    "CardPower": 9,
+    "HighQuality": true,
+    "Description": "A master of black magic, feared for her powerful curses."
+  }
+]

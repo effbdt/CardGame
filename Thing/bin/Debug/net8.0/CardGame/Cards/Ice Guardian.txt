@@ -1,0 +1,5 @@
+CardId: c5f87a4f-7c78-49ba-ac1a-74315ba7274a
+CardName: Ice Guardian
+CardPower: 6
+HighQuality: False
+Description: A mystical guardian that freezes enemies in their tracks.

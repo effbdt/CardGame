@@ -1,0 +1,5 @@
+CardId: 435de544-2db5-4053-ae17-fbec6755a6bb
+CardName: Blazing Phoenix
+CardPower: 12
+HighQuality: True
+Description: A legendary bird that rises from its own ashes.
