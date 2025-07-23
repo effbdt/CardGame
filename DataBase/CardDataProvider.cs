@@ -8,53 +8,53 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
-    public class CardDataProvider : ICardDataProvider
-    {
-        private readonly CardGameDbContext _context;
+	public class CardDataProvider : ICardDataProvider
+	{
+		private readonly CardGameDbContext _context;
 
-        public CardDataProvider(CardGameDbContext context)
-        {
-            _context = context;
-        }
+		public CardDataProvider(CardGameDbContext context)
+		{
+			_context = context;
+		}
 
-        public void Add(Card card)
-        {
-            _context.Add(card);
-            _context.SaveChanges();
-        }
+		public void Add(Card card)
+		{
+			_context.Add(card);
+			_context.SaveChanges();
+		}
 
-        public IEnumerable<Card> GetAllCards()
-        {
-            return _context.Cards.ToList();
-        }
+		public IEnumerable<Card> GetAllCards()
+		{
+			return _context.Cards.ToList();
+		}
 
-        public Card GetCardByName(string cardName)
-        {
-            return _context.Cards.FirstOrDefault(c => c.CardName == cardName);
-        }
+		public Card GetCardByName(string cardName)
+		{
+			return _context.Cards.FirstOrDefault(c => c.CardName == cardName);
+		}
 
-        public LinkedStack<Card> GetDeck()
-        {
-            LinkedStack<Card> Deck = new LinkedStack<Card>();
-            var cards = _context.Cards.Take(15).ToList();
+		public LinkedStack<Card> GetDeck()
+		{
+			LinkedStack<Card> Deck = new LinkedStack<Card>();
+			var cards = _context.Cards.Take(15).ToList();
 
-            foreach (var card in cards)
-            {
-                Deck.LinkeDStackOnTop(card);
-            }
+			foreach (var card in cards)
+			{
+				Deck.LinkeDStackOnTop(card);
+			}
 
-            return Deck;
-        }
+			return Deck;
+		}
 
-        public List<Card> GetHand()
-        {
-            LinkedStack<Card> Deck = GetDeck();
-            List<Card> Hand = new List<Card>();
-            for (int i = 0; i < 5; i++)
-            {
-                Hand.Add(Deck.GetFromTop());
-            }
-            return Hand;
-        }
-    }
+		public List<Card> GetHand(ref LinkedStack<Card> Deck)
+		{
+
+			List<Card> Hand = new List<Card>();
+			for (int i = 0; i < 5 && !Deck.IsEmpty(); i++)
+			{
+				Hand.Add(Deck.GetFromTop());
+			}
+			return Hand;
+		}
+	}
 }

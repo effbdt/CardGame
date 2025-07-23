@@ -62,9 +62,9 @@ namespace Application
 			return _cardDataProvider.GetDeck();
 		}
 
-		public List<Card> GetHand()
+		public List<Card> GetHand(ref LinkedStack<Card> Deck)
 		{
-			return _cardDataProvider.GetHand();
+			return _cardDataProvider.GetHand(ref Deck);
 		}
 
 		public void PlayCard(ref List<Card> Hand, Card playedCard, ref int points)

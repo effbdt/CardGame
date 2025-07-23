@@ -84,9 +84,9 @@ namespace Game
 		private static void StartGame(ICardGameService cardGameService)
 		{
 			LinkedStack<Card> playerDeck = cardGameService.CardService.GetDeck();
-			List<Card> playerHand = cardGameService.CardService.GetHand();
+			List<Card> playerHand = cardGameService.CardService.GetHand(ref playerDeck);
 			LinkedStack<Card> opponentDeck = cardGameService.CardService.GetDeck();
-			var opponentHand = cardGameService.CardService.GetHand();
+			var opponentHand = cardGameService.CardService.GetHand(ref opponentDeck);
 			int playerPoints = 0;
 			int opponentPoints = 0;
 			int turn = 1;
@@ -130,17 +130,18 @@ namespace Game
 				}
 				else if (canDraw)
 				{
-					int amountOfCardsDrawn = Math.Min(5 - playerHand.Count(), playerDeck.n);
+					int amountOfCardsDrawn = Math.Min(5 - playerHand.Count(), playerDeck.Length);
 					cardGameService.CardService.DrawCards(ref playerHand, ref playerDeck);
 					Console.WriteLine($"\n{amountOfCardsDrawn} card(s) were drawn from your deck!\nCards remaining in your deck: {playerDeck.n}");
 					Console.WriteLine("Press enter to continue!");
 					Console.ReadLine();
 					Console.Clear();
+					canDraw = false;
 				}
 
 
 			} while (playerHand.Count() > 0 || !playerDeck.IsEmpty());
-			Console.ReadLine();
+
 		}
 	}
 }

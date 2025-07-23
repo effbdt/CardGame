@@ -17,7 +17,7 @@ namespace Application
 
 		LinkedStack<Card> GetDeck();
 
-		List<Card> GetHand();
+		List<Card> GetHand(ref LinkedStack<Card> Deck);
 		void PlayCard(ref List<Card> Hand, Card playedCard, ref int points);
 		void DrawCards(ref List<Card> Hand, ref LinkedStack<Card> Deck);
 

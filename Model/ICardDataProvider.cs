@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public interface ICardDataProvider
-    {
-        void Add(Card card);
-        IEnumerable<Card> GetAllCards();
-        Card GetCardByName(string cardName);
+	public interface ICardDataProvider
+	{
+		void Add(Card card);
+		IEnumerable<Card> GetAllCards();
+		Card GetCardByName(string cardName);
 
-        LinkedStack<Card> GetDeck();
+		LinkedStack<Card> GetDeck();
 
-        List<Card> GetHand();
-    }
+		List<Card> GetHand(ref LinkedStack<Card> Deck);
+	}
 }

@@ -12,6 +12,7 @@ namespace Model
 		T GetFromTop();
 		void ShowCards(Action<T> show);
 
+		int Length { get; }
 		bool IsEmpty();
 	}
 }

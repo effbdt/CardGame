@@ -26,6 +26,13 @@ namespace Model
 	{
 		Node<T> head;
 		public int n;
+
+		public int Length
+		{
+			get
+			{ return n; }
+		}
+
 		public LinkedStack()
 		{
 			head = null;
